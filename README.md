@@ -1,2 +1,2 @@
-# exemple
-pour apprendre
+# svmExample
+# Un exemple d'utilisation des SVM
