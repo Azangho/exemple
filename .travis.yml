@@ -12,12 +12,25 @@ cache:
 apt_packages:
   - libgdal-dev
   - libudunits2-dev
-
-r_packages:
-  - rsconnect
-  - shiny
-  - tidyverse
-  - kableExtra
   
-script:
-  - R -f deploy.R
+r_packages:
+ - rsconnect
+ - shiny
+ - e1071
+ - gbm
+ - randomForest
+ - class
+ - shinydashboard
+ - DT
+ - reshape
+ - funModeling
+ - GGally
+ - dplyr
+ - datasets
+ - ggplot2
+ - tree
+ - caret
+ - parallelSVM
+ 
+ script:
+   - R -f deploy.R
