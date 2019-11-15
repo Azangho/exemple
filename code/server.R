@@ -63,7 +63,7 @@ shinyServer(function(input, output,session) {
     # read.table("D:/M2/SVM/creditcard.csv", header =T ,sep = ",")
     # })
     data=reactive({
-        readRDS(file='C:/Users/camille/Desktop/Documents/GitHub/exemple/donnee/creditcard.rds')
+        readRDS("creditcard.rds")
     })
     
     set.seed(1234)

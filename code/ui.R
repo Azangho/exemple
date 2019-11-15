@@ -89,7 +89,7 @@ dashboardPage(
         tabItems(
             #Introduction 
             # Read data
-            tabItem(tabName = "intro", includeHTML("D:/M2/SVM/test/intro.html")), 
+            tabItem(tabName = "intro", includeHTML("intro.html")), 
             # Read data
             
             tabItem(tabName = "datafile",  
