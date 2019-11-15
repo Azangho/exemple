@@ -59,12 +59,12 @@ plot_num_density <- function (data, path_out = NA)
 
 shinyServer(function(input, output,session) {
     
-    #data=reactive({
-    # read.table("D:/M2/SVM/creditcard.csv", header =T ,sep = ",")
-    # })
     data=reactive({
-        readRDS("creditcard.rds")
-    })
+     read.table("D:/M2/SVM/creditcard.csv", header =T ,sep = ",")
+     })
+    #data=reactive({
+     #   readRDS("creditcard.rds"     )
+    #})
     
     set.seed(1234)
     

@@ -191,7 +191,7 @@ dashboardPage(
                                                 box(width = 6, verbatimTextOutput("perflog" ),status = "primary",title="performance"),
                                                 box(plotOutput("ROC4", height = "300px" ),status = "primary",title="courbe AUC_logistique"))
                                             
-                                   ))))
+                                  ))))
                     
                     
                     
