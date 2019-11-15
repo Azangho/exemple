@@ -135,7 +135,7 @@ shinyServer(function(input, output,session) {
         x
     })
     
-    b=reactive(input$`prop `)
+    b=reactive(input$prop )
     
     appren=reactive({
         under(train(),b(),31)
@@ -228,10 +228,10 @@ shinyServer(function(input, output,session) {
     })
     output$perflog=renderPrint({confus()})
     
-    #output$ROC4=renderPlot({
-    #PROC=plot.roc(test()$Class,predict(A4(),test(), type="response"),main="", percent=TRUE,
-    #  ci=TRUE)
-    #SE=ci.se(PROC,specificities=seq(0, 100, 5))
-    #plot(SE, type="shape", col="light blue")
-    #})
+    output$ROC4=renderPlot({
+        PROC=plot.roc(test()$Class,predict(A4(),test(), type="response"),main="", percent=TRUE,
+                      ci=TRUE)
+        SE=ci.se(PROC,specificities=seq(0, 100, 5))
+        plot(SE, type="shape", col="light blue")
+    })
 })

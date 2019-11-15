@@ -1,15 +1,13 @@
+
 library(shiny)
 library(shinydashboard)
-
-
-
 dashboardPage(
-    dashboardHeader(title = "D�tection des fraudes sur les cartes de cr�dits", titleWidth=800),
+    dashboardHeader(title = "Détection des fraudes sur les cartes de crédits", titleWidth=800),
     
     dashboardSidebar(
         sidebarMenu(
             menuItem("Introduction", tabName = "intro", icon = icon("home")),
-            menuItem("Donn�es", tabName = "datafile", icon = icon("table")),
+            menuItem("Données", tabName = "datafile", icon = icon("table")),
             menuItem("Analyse", tabName = "analysis", icon = icon("chart-bar")
             ),
             menuItem("Paper", tabName = "paper", icon = icon("file-pdf-o")),
@@ -140,13 +138,13 @@ dashboardPage(
                                                                        "V22", "V23", "V24", "V25" , "V26", "V27"  ,  "V28" , "Amount","Time"))),
                                                  
                                                  mainPanel(  plotOutput("plot2"),width = "100%",tags$footer(tags$em("le lien entre les variables explicatives"))))),
-                                        box(with=5 , status = "info",  plotOutput("Grap2", height = "300px"), tags$footer(tags$em("Proportion des 0 et 1  dans la variable d�pendante"))),
-                                        box( with=5 ,title="Corr�lation", plotOutput("tabCor") ,status = "primary",tags$footer(tags$em("En probabilit�s et en statistique, 
-                              la corr�lation entre plusieurs variables al�atoires ou statistiques est une notion de liaison qui contredit leur ind�pendance.
-                               Ici  nous avons des varaiables tr�s peu correler entre elles "))))
+                                        box(with=5 , status = "info",  plotOutput("Grap2", height = "300px"), tags$footer(tags$em("Proportion des 0 et 1  dans la variable dÃÂ©pendante"))),
+                                        box( with=5 ,title="CorrÃÂ©lation", plotOutput("tabCor") ,status = "primary",tags$footer(tags$em("En probabilitÃÂ©s et en statistique, 
+                              la corrÃÂ©lation entre plusieurs variables alÃÂ©atoires ou statistiques est une notion de liaison qui contredit leur indÃÂ©pendance.
+                               Ici  nous avons des varaiables trÃÂ©s peu correler entre elles "))))
                            ),
-                           tabPanel("Densit� des variables",status = "info",width = 24,
-                                    plotOutput("Grap3", width = "100%" ),tags$footer(tags$em("Les variables sont toutes centr�es sur z�ro "))
+                           tabPanel("DensitÃÂ© des variables",status = "info",width = 24,
+                                    plotOutput("Grap3", width = "100%" ),tags$footer(tags$em("Les variables sont toutes centrÃÂ©es sur zÃÂ©ro "))
                                     
                            ))),
             # Analyse
@@ -174,8 +172,9 @@ dashboardPage(
                                    ),
                                    tabPanel("Abre de classification",
                                             fluidPage(
-                                                box(width = 6, verbatimTextOutput("tree"),status = "primary", title="sortie de arbre de classification",tags$footer(tags$em("Misclassification error rate estt ici le taux d'erreure d'apprentissage. Comme nous pouvons le voir est faible "))),
-                                                box(width = 6, plotOutput("abre", height = "300px" ),status = "primary",title="Performence de la m�thode sur des donn�es test"),
+                                                box(width = 6, verbatimTextOutput("tree"),status = "primary", title="sortie de arbre de classification",tags$footer(tags$em("Misclassification error rate estt ici 
+                                                    le taux d'erreure d'apprentissage. Comme nous pouvons le voir est faible "))),
+                                                box(width = 6, plotOutput("abre", height = "300px" ),status = "primary",title="Performence de la mÃÂ©thode sur des donnÃÂ©es test"),
                                                 box(width = 6, verbatimTextOutput("treroc"),status = "primary"),
                                                 box(plotOutput("ROC2", height = "300px" ),status = "primary",title="courbe AUC_AM"))
                                             
@@ -190,11 +189,11 @@ dashboardPage(
                                             fluidPage(
                                                 box(width = 6, verbatimTextOutput("logs"),status = "primary", title="logistique"),
                                                 box(width = 6, verbatimTextOutput("perflog" ),status = "primary",title="performance"),
-                                                # box(plotOutput("ROC4", height = "300px" ),status = "primary",title="courbe AUC_logistique"))
-                                                
-                                            ))))
-                        
-                        
-                        
-                        
-                    )))))
+                                                box(plotOutput("ROC4", height = "300px" ),status = "primary",title="courbe AUC_logistique"))
+                                            
+                                   ))))
+                    
+                    
+                    
+                    
+            ))))
