@@ -31,6 +31,9 @@ r_packages:
  - tree
  - caret
  - parallelSVM
+ - ggvis
+ - PRROC 
+ - pROC
  
  script:
    - R -f deploy.R
